@@ -1,0 +1,72 @@
+<!-- This is how we comment in html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Notes</title>
+</head>
+<body>
+<a href="#donations"> Donate to my project </a>
+<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg">
+<p> It is possible to create a link to internal sections of a page with anchor elements. To create an internal link,
+    you assign a link's href attribute to a hash symbol # plus the value of the id attribute for the element that you
+    want to internally link to, usually further down the page.
+    You then need to add the same id attribute to the element you are linking to. An id is an attribute that uniquely
+    describes an element. </p>
+<p>HTML5 introduces more descriptive HTML tags. These include main, header, footer, nav, video, article, section
+    and others.</p>
+<p>This is paragraph. We use p to create a paragraph. We have to close p element </p>
+<p>This is how image is done. alt attribute is used for screen readers to improve accessibility and is displayed if the
+    image fails to load. </p>
+<p> target is an anchor tag attribute that specifies where to open the link. The value _blank specifies to open the
+    link in a new tab. The href is an anchor tag attribute that contains the URL address of the link:</p>
+<p> Sometimes you want to add an elements to your website before you know where they will link.
+This is also handy when you're changing the behavior of a link using JavaScript</p>
+<p>It is possible to turn image into link. This is how it is done: </p>
+<a href="#"> <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"> </a>
+
+<br>
+<a href="https://www.freecatphotoapp.com" target="_blank"> This is link</a>
+<ul>
+        <li>this is unordered list item one</li>
+        <li>this is unordered list item two</li>
+    </ul>
+    <ol>
+        <li> This is ordered list item one </li>
+        <li> This is ordered list item two </li>
+    </ol>
+<form action="kamol@email.com">
+    <input type="Text" placeholder="This is placeholder text" required>
+    <button type="submit"> This button submits the form to url. </button>>
+</form>
+<p>input elements is self-closing </p>
+<p> radio buttons are type of input. You can use radio buttons for questions where you want the user to only give you
+    one answer out of multiple options.</p>
+<h1>Use HTML5 to Require a Field </h1>
+<p> You can require specific form fields so that your user will not be able to submit your form until he or she has
+    filled them out.
+</p>
+<p>
+    For example, if you wanted to make a text input field required, you can just add the attribute required within your
+    input element, like this: < input type="text" required >
+</p>
+<h1>Create a Set of Radio Buttons </h1>
+<p> You can use radio buttons for questions where you want the user to only give you one answer out of multiple options.
+    Radio buttons are a type of input.
+    Each of your radio buttons can be nested within its own label element. By wrapping an input element inside a label
+    element it will automatically associate the radio button input with the label element surrounding it.
+    All related radio buttons should have the same name attribute to create a radio button group.
+    By creating a radio group, selecting any single radio button will automatically deselect the other buttons
+    within the same group ensuring only one answer is provided by the user.
+    Here's an example of a radio button: </p>
+<p>
+<label>
+  <input type="radio" name="indoor-outdoor">Indoor
+</label>
+</p>
+
+<p id="donations"> Here you can donate crypto to our project </p>
+<footer id="footer"> My corporation 2022. All rights reserved </footer>
+</body>
+</html>
