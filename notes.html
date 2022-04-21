@@ -7,8 +7,14 @@
     <title>Notes</title>
 </head>
 <body>
+<style>
+h2 {
+color: green;
+}
+</style>
 <a href="#donations"> Donate to my project </a>
-<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg">
+<p>
+<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"> </p>
 <p> It is possible to create a link to internal sections of a page with anchor elements. To create an internal link,
     you assign a link's href attribute to a hash symbol # plus the value of the id attribute for the element that you
     want to internally link to, usually further down the page.
@@ -43,7 +49,7 @@ This is also handy when you're changing the behavior of a link using JavaScript<
 <p>input elements is self-closing </p>
 <p> radio buttons are type of input. You can use radio buttons for questions where you want the user to only give you
     one answer out of multiple options.</p>
-<h1>Use HTML5 to Require a Field </h1>
+<h2>Use HTML5 to Require a Field </h2>
 <p> You can require specific form fields so that your user will not be able to submit your form until he or she has
     filled them out.
 </p>
@@ -51,7 +57,7 @@ This is also handy when you're changing the behavior of a link using JavaScript<
     For example, if you wanted to make a text input field required, you can just add the attribute required within your
     input element, like this: < input type="text" required >
 </p>
-<h1>Create a Set of Radio Buttons </h1>
+<h2>Create a Set of Radio Buttons </h2>
 <p> You can use radio buttons for questions where you want the user to only give you one answer out of multiple options.
     Radio buttons are a type of input.
     Each of your radio buttons can be nested within its own label element. By wrapping an input element inside a label
@@ -60,11 +66,124 @@ This is also handy when you're changing the behavior of a link using JavaScript<
     By creating a radio group, selecting any single radio button will automatically deselect the other buttons
     within the same group ensuring only one answer is provided by the user.
     Here's an example of a radio button: </p>
+<p>It is considered best practice to set a for attribute on the label element, with a value that matches the value of
+    the id attribute of the input element. This allows assistive technologies to create a linked relationship between
+    the label and the related input element. For example:</p>
 <p>
-<label>
-  <input type="radio" name="indoor-outdoor">Indoor
+<label for="indoor">
+  <input id="indoor" type="radio" name="indoor-outdoor">Indoor
+</label>
+    <label for="outdoor">
+  <input id="outdoor" type="radio" name="indoor-outdoor">Outdoor
 </label>
 </p>
+<h2>Checkboxes </h2>
+<p> Forms commonly use checkboxes for questions that may have more than one answer. </p>
+<p> Checkboxes are a type of input. </p>
+<p> Each of your checkboxes can be nested within its own label element. By wrapping an input element inside a label
+    element it will automatically associate the checkbox input with the label element surrounding it.
+    All related checkbox inputs should have the same name attribute. It is considered best practice to explicitly
+    define the relationship between a checkbox input and its corresponding label by setting the for attribute on the
+    label element to match the id attribute of the associated input element.
+    Here's an example of a checkbox:</p>
+<form>
+    <label for="easy">
+        <input id="easy" type="checkbox" name="difficulty">easy
+    </label>
+    <label for="medium">
+        <input id="medium" type="checkbox" name="difficulty">medium
+    </label>
+    <label for="difficult">
+        <input id="difficult" type="checkbox" name="difficulty">difficult
+    </label>
+    </form>
+<p>Use the value attribute with Radio Buttons and Checkboxes
+
+When a form gets submitted, the data is sent to the server and includes entries for the options selected. Inputs
+    of type radio and checkbox report their values from the value attribute.</p>
+
+For example:
+
+<label for="indoor1">
+  <input id="indoor1" value="indoor" type="radio" name="indoor-outdoor">Indoor
+</label>
+<label for="outdoor1">
+  <input id="outdoor1" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+</label>
+<p> Here, you have two radio inputs. When the user submits the form with the indoor option selected, the form data will
+    include the line: indoor-outdoor=indoor. This is from the name and value attributes of the "indoor" input.
+    If you omit the value attribute, the submitted form data uses the default value, which is on. In this scenario,
+    if the user clicked the "indoor" option and submitted the form, the resulting form data would be indoor-outdoor=on,
+    which is not useful. So the value attribute needs to be set to something to identify the option.
+    Give each of the existing radio and checkbox inputs the value attribute. Do not create any new radio or checkbox
+    elements. Use the input label text, in lowercase, as the value for the attribute. </p>
+<h2>Check Radio Buttons and Checkboxes by Default </h2>
+<p> You can set a checkbox or radio button to be checked by default using the checked attribute.
+    To do this, just add the word checked to the inside of an input element. For example:</p>
+<label for="a">
+<input id="a" value="a" type="radio" name="test"> a
+</label> <br>
+<label for="b">
+<input id="b" value="b" type="radio" name="test" checked> b
+</label> <br>
+<label for="c">
+<input id="c" value="c" type="radio" name="test"> c
+</label>
+
+<h2>Nest Many Elements within a Single div Element </h2>
+<p> The div element, also known as a division element, is a general purpose container for other elements.</p>
+<p> The div element is probably the most commonly used HTML element of all. Just like any other non-self-closing
+    element, you can open a div element with < div > and close it on another line with < /div >. </p>
+<h2> Declare the Doctype of an HTML Document </h2>
+<p> The challenges so far have covered specific HTML elements and their uses. However, there are a few elements
+    that give overall structure to your page, and should be included in every HTML document. At the top of your
+    document, you need to tell the browser which version of HTML your page is using. HTML is an evolving language,
+    and is updated regularly. Most major browsers support the latest specification, which is HTML5. However, older
+    web pages may use previous versions of the language. </p>
+<p> You tell the browser this information by adding the < !DOCTYPE ...> tag on the first line, where the ... part is
+    the version of HTML. For HTML5, you use < !DOCTYPE html>. </p>
+<p> The ! and uppercase DOCTYPE is important, especially for older browsers. The html is not case sensitive. </p>
+<p> Next, the rest of your HTML code needs to be wrapped in html tags. The opening < html > goes directly below
+    the < !DOCTYPE html > line, and the closing < /html> goes at the end of the page.
+<h2>    Define the Head and Body of an HTML Document </h2>
+<p>     You can add another level of organization in your HTML document within the html tags with the head and body
+        elements. Any markup with information about your page would go into the head tag. Then any markup with the
+    content of the page (what displays for a user) would go into the body tag. </p>
+<p> Metadata elements, such as link, meta, title, and style, typically go inside the head element. </p>
+
+<h1 style="color: blue;"> Chapter2 Basic CSS</h1>
+
+<h2> Change the Color of Text </h2>
+<p> Now let's change the color of some of our text. We can do this by changing the style of your h2 element.
+    The property that is responsible for the color of an element's text is the color style property.
+    Here's how you would set your h2 element's text color to blue:
+    < h2 style="color: blue;">CatPhotoApp< /h2>
+<p> Note that it is a good practice to end inline style declarations with a ";" . </p>
+<h2> Use CSS Selectors to Style Elements </h2>
+<p> With CSS, there are hundreds of CSS properties that you can use to change the way an element looks on your page.
+    When you entered < h2 style="color: red;">CatPhotoApp< /h2>, you were styling that individual h2 element with
+    inline CSS, which stands for Cascading Style Sheets.
+    That's one way to specify the style of an element, but there's a better way to apply CSS. At the top of your code,
+    create a style block like this: <br>
+    < style>            <br>
+    < /style>
+<br>
+    Inside that style block, you can create a CSS selector for all h2 elements. For example, if you wanted all h2
+    elements to be red, you would add a style rule that looks like this: <br>
+
+    < style>            <br>
+      h2 {              <br>
+        color: red;     <br>
+      }                 <br>
+    < /style>           <br>
+    Note that it's important to have both opening and closing curly braces ({ and }) around each element's style
+    rule(s). You also need to make sure that your element's style definition is between the opening and closing style
+    tags. Finally, be sure to add a semicolon to the end of each of your element's style rules.
+
+
+
+
+
 
 <p id="donations"> Here you can donate crypto to our project </p>
 <footer id="footer"> My corporation 2022. All rights reserved </footer>
