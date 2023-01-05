@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kamoliddin Muminov">
+    <meta name="description" content="--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------">
+    <title>html da ro'yxatlar</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <style>
+        /* {
+            border: 1px solid red;
+        } */ 
+        body {
+            background-color: #303540;
+            color: #cccccc;
+            font-size: 20px;
+        }
+        main {
+            width: 40%;
+            margin: 0 auto;
+        }
+        pre {
+            background-color: #000000;
+            font-size: 16px;
+        }
+        button {
+            font-size: 20px;
+            display: inline-block;
+            width: 30%;
+            height: 40px;
+            margin: 5px auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            4-chi dars: <br> Ro'yxatlar
+        </h1>
+        <hr>
+        <nav>
+            <h3>
+                Mundarija:
+            </h3>
+            <ul>
+                <li>Raqamlangan ro'yxat</li>
+                <li>Raqamlanmagan ro'yxat</li>
+                <li>Tavsifli ro'yxat</li>
+            </ul>
+        </nav>
+        <hr>
+        <section id="raqamlangan">
+            <h2>
+                Raqamlangan ro'yxat
+            </h2>
+            <p>
+                Raqamlangan ro'yxat quyidagicha yoziladi:
+            </p>
+            <pre>
+                <code>
+                    &lt;p&gt;Kredit olish uchun kerak bo'lgan hujjatlar:&lt;/p&gt;
+                    &lt;ol&gt;
+                        &lt;li&gt;Mahalladan ma'lumotnoma&lt;/li&gt;
+                        &lt;li&gt;Ish joyidan ma'lumotnoma&lt;/li&gt;
+                        &lt;li&gt;Nikoh guvohnomasi&lt;/li&gt;
+                        &lt;li&gt;Soliqdan qarzi yo'qligi haqida hujjat&lt;/li&gt;
+                        &lt;li&gt;Gazdan qarzi yo'qligi haqida hujjat&lt;/li&gt;
+                        &lt;li&gt;Elektr energiyasidan qarzi yo'qligi haqida hujjat&lt;/li&gt;
+                        &lt;li&gt;Oshnalardan qarzi yo'qligi haqida guvohnoma&lt;/li&gt;
+                    &lt;/ol&gt;
+                </code>
+            </pre>
+        </section>
+        <hr>
+        <section id="raqamlanmagan">
+            <h2>
+                Raqamlanmagan ro'yxat
+            </h2>
+            <p>
+                Raqamlanmagan ro'yxatning moddalari, ya'ni qatorlari oldidan raqam bo'lmaydi. Raqam o'rnida doira shakli ifodalanadi. Raqamlanmagan ro'yxat xuddi raqamlangan ro'yxat kabi yoziladi, faqat &lt;ol&gt; o'rniga &lt;ul&gt; yoziladi. Masalan: 
+            </p>
+            <pre>
+                <code>
+                    &lt;p&gt;Pishirig'imizga kerak bo'ladigan masalliqlar ro'yxati:&lt;/p&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;300 gram un &lt;/li&gt;
+                        &lt;li&gt;200 gram suv&lt;/li&gt;
+                        &lt;li&gt;1 dona tuxum&lt;/li&gt;
+                        &lt;li&gt;Xamirturish&lt;/li&gt;
+                        &lt;li&gt;Kartoshka 2 dona&lt;/li&gt;
+                        &lt;li&gt;yog', yarim litr&lt;/li&gt;
+                    &lt;/ul&gt;
+                </code>
+            </pre>
+            <p>
+                Ko'rib turganingizdek raqamlangan va raqamlanmagan ro'yxatlar avtomatik tarzda chap tarafdan joy qoldirgan holda yoziladi. 
+            </p>
+        </section>
+        <hr>
+        <section id="tavsifli">
+            <h2>
+                Tavsifli ro'yxat
+            </h2>
+            <p>
+                Tavsifli ro'yxat ingliz tilida description list deyidi va u &lt;dl&gt; tegi yordamida yoziladi. Misol tariqasida yuqorida keltirilgan raqamlanmagan ro'yxatni tavsifli ro'yxatga aylantiramiz: 
+            </p>
+            <pre>
+                <code>
+                    &lt;p&gt;Pishirig'imizga kerak bo'ladigan masalliqlar ro'yxati:&lt;/p&gt;
+                    &lt;dl&gt;
+                        &lt;dt&gt;Oliy nav bug'doy uni&lt;/dt&gt;
+                        &lt;dd&gt;300 gram &lt;/dd&gt;
+                        &lt;dt&gt;Qaynatilib sovutilgan suv&lt;/dt&gt;
+                        &lt;dd&gt;200 gram yoki 3 piyola &lt;/dd&gt;
+                        &lt;dt&gt;Tovuq tuxumi&lt;/dt&gt;
+                        &lt;dd&gt;1 dona katta yoki 2 ta kichik &lt;/dd&gt;
+                        &lt;dt&gt;Quruq xamirturish&lt;/dt&gt;
+                        &lt;dd&gt;5 gram yoki yarim choy qoshig'ida &lt;/dd&gt;
+                        &lt;dt&gt;Kartoshka&lt;/dt&gt;
+                        &lt;dd&gt;2 dona, o'rtacha&lt;/dd&gt;
+                        &lt;dt&gt;O'simlik yog'i&lt;/dt&gt;
+                        &lt;dd&gt;500 gram&lt;/dd&gt;
+                    &lt;/dl&gt;
+                </code>
+            </pre>
+            <p>
+                Yuqoridagi misolda ko'rib turganingiz kabi tavsifli ro'yxatlar qatorlar qo'shaloq &lt;dt&gt; va &lt;dd&gt; teglari bilan keladi. 
+            </p>
+        </section>
+        
+        <a href="uchinchisi.html">
+            <button>
+                3-chi darsga qaytish
+            </button>
+        </a>
+        <a href="jadval.html">
+            <button>
+                Dars Jadvali
+            </button>
+        </a>
+        <a href="beshinchisi.html">
+            <button>
+                5-chi darsga o'tish
+            </button>
+        </a>
+    </main>
+</body>
+</html>
