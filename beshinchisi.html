@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kamoliddin Muminov">
+    <meta name="description" content="HTML da a tegi yordamida havolalar yaratish----------------------------------------------------------------------------------------------------------">
+    <title>HTML da havolalar</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <style>
+        /* {
+            border: 1px solid red;
+        } */ 
+        body {
+            background-color: #303540;
+            color: #cccccc;
+            font-size: 20px;
+        }
+        main {
+            width: 40%;
+            margin: 0 auto;
+        }
+        pre {
+            background-color: #000000;
+            font-size: 16px;
+        }
+        button {
+            font-size: 20px;
+            display: inline-block;
+            width: 30%;
+            height: 40px;
+            margin: 5px auto;
+        }
+        a {
+            color: #cccccc;
+        }
+        a:visited {
+            color: #bbbbbb;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            5-chi dars: <br> Havolalar
+        </h1>
+        <hr>
+        <nav>
+            <h3>
+                Mundarija:
+            </h3>
+            <ul>
+                <li>
+                    <a href="#mutlaqManzil">Mutlaq manzil (Absolute reference)</a> 
+                </li>
+                <li>
+                    <a href="#nisbiyManzil">Nisbiy manzil (Relative reference)</a> 
+                </li>
+                <li>
+                    <a href="#ichkiManzil">Ichki manzil (Internal reference)</a> 
+                </li>
+            </ul>
+        </nav>
+        <hr>
+        <section id="mutlaqManzil">
+            <h2>
+                Mutlaq manzil (Absolute reference)
+            </h2>
+            <p>
+                HTML qisqartmasining birinchi ikkita harfi ingliz tilida hyper text  (HT) o'zbek tilida oshuvchi matn ya'ni havolani anglatadi. Foydalanuvchini boshqa manzilga oshiradi, ya'ni o'tkazadi. Oddiy matndan farqli ularoq, havolali matn ustiga sichqoncha ko'rsatgichini keltirib chap tugmasini bosganimizda havola ishga tushadi. Havola ko'pincha sizni boshqa vebsahifaga olib boradi, yoki boshqa sahifani yangi oynada ochadi. Ushbu darsimizda havola yaratishni urganamiz. <br>
+                Havola &lt;a&gt; tegi yordamida yasaladi. Masalan siz vebsahifangizda ijtimoiy tarmoqdagi sahifalaringizga havola yasamoqchisiz. Bu quyidagicha yasaladi: 
+            </p>
+            <pre>
+                <code>
+                    &lt;p&gt;
+                        Bu mening
+                        &lt;a href="www.facebook.com/profilingizmoni"&gt;facebook&lt;/a&gt; 
+                        dagi sahifam:
+                    &lt;/p&gt;
+                </code>
+            </pre>
+            <p>
+                Ushbu kodni browserda ochganimizda quyidagicha ko'rinishga ega bo'ladi:
+            </p>
+            <img src="a.png" alt="HTML da ijtimoiy tarmoqqa tashqi havola yasash misol qilib keltirilgan browserdagi ko'rinishi">
+            <p>
+                Yuqoridagi misolda ko'rib turganingiz kabi havola rangi avtomatik tarzda siyoh rangga o'zgardi. Bunga sabab browser havolali matnni oddiy matndan ajralib turishini ta'minlaydi. <br>
+                Havola ustiga sichqoncha tugmasi bosilganda, browser havola rangini ko'k rangga o'zgartiradi. Bu ham, foydalanuchilarga qulaylik tug'dirish maqsadida, ya'ni tugma bosilgan havolalarni tugma bosilmagan havolalardan ajralib turishini belgilaydi.
+                Havola ranglarini istalgan rangga o'zgartirish mumkin, ammo buni kursimizning keyingi bosqichida, ya'ni css qismida urganamiz. <br>
+                Yuqorida kodda kiritilgan manzil to'liq manzil yoki mutlaq manzil deyiladi.
+        </section>
+        <hr>
+        <section id="nisbiyManzil">
+            <h2>
+                Nisbiy manzil (Relative reference)
+            </h2>
+            <p>
+                Agar havolaga qilib bog'lanadigan fayl, vebsahifamiz fayli bilan bir joyda joylashgan bo'lsa href hossasi quyidagicha yoziladi. 
+            </p>
+            <pre>
+                <code>
+                    &lt;p&gt;
+                        Ramsni ko'rish uchun
+                        &lt;a href="rasm.jpg"&gt;tugmani&lt;/a&gt; 
+                        bosing
+                    &lt;/p&gt;
+                </code>
+            </pre>
+            <p>
+                Bu nisbiy manzil deyiladi, ingliz tilida relative reference deyiladi, relativ referens deb o'qiladi. <br>
+                href hossasiga 
+            </p>
+            <p>
+                Ikkita vebsahifangizni bir biriga havola orqali bog'lash uchun quyidagicha ko'rinishda kod yozishingiz kerak:
+            </p>
+            <pre>
+                <code>
+                    &lt;p&gt;
+                        Bizga murojot qilishni barcha yo'llarini ko'rish uchun
+                        &lt;a href="aloqa.html"&gt;aloq qismiga o'tish&lt;/a&gt; 
+                        ni maslahat berlamiz.
+                    &lt;/p&gt;
+                </code>
+            </pre>
+            <p>
+                Agar aloqa.html fayli sizda hali mavjud bo'lmasa, unda index.html joylashgan papkada yangi fayl yarating va uni haqida.html deb nomlang. Siz endi haqida.html faylini mustaqil yarata olasiz va buning uchun shu kungacha urgangan bilimlaringizdan foydalaning. 
+            </p>
+        </section>
+        <hr>
+        <section id="ichkiManzil">
+            <h2>
+                Ichki manzil (Internal reference)
+            </h2>
+            <p>
+                Ichki manzil havolalari skrol turgmasini pastga tormasdan, vebsahifaing istalgan qismiga tez yetib borish uchun qo'llaniladi. Ichki manzil havolasini qo'llashdan oldin, ikkita html tegi bilan tanishib chiqamiz. <br>
+                Birinchisi bu &lt;nav&gt; elementi. nav ingliz tilida navigation degan so'zning qisqartmasidir. navigation navigeyshn deb o'qiladi va o'zbek tilida yo'l-yo'riq degan ma'noni anglatadi. <br>
+                &lt;nav&gt; va &lt;/nav&gt; teglari ichida asosan menyu tugmalari joylashtiriladi. <br>
+                Ikkinchi elementimiz bu &lt;section&gt; elementi. Section so'zi inglizcha bo'lib sekshn deb o'qiladi va o'zbek tilida ma'nosi bo'lim yoki bob. <br>
+                &lt;section&gt; tegi vebsahifangizni bo'limlarga bo'lish uchun ishlatiladi. 
+                Masalan:
+            </p>
+            <pre>
+                <code>
+                    &lt;nav&gt;
+                    &lt;/nav&gt;
+                    &lt;section&gt; &lt;/section&gt;
+                    &lt;section&gt; &lt;/section&gt;
+                    &lt;section&gt; &lt;/section&gt;
+                </code>
+            </pre>
+            <p>
+                Yuqoridagi kodda 1 ta nav elementi va 3 ta section elementi yasaldi. Endi nav elementi ichiga uchta banddan iborat raqamlanmagan ro'yxat tayyorlaymiz va section elementiga id hosssini qo'shamiz. id hossasi element boshqa ayni turdagi elementlardan ajralib turishi uchun ishlatiladi va elementga alohida belgi beradi. 
+                Masalan: 
+            </p>
+            <pre>
+                <code>
+                    &lt;nav&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt; Men haqimda &lt;/li&gt;
+                            &lt;li&gt; Qilgan ishlarim &lt;/li&gt;
+                            &lt;li&gt; Men bilan bog'lanish &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                    &lt;section id="menHaqimda"&gt; &lt;/section&gt;
+                    &lt;section id="qilganIshlarim"&gt; &lt;/section&gt;
+                    &lt;section id="boglanish"&gt; &lt;/section&gt;
+                </code>
+            </pre>
+            <p>
+                Endigi bosqichda har bir section elementni ma'lumotlar bilan to'ldiramiz. Biz quyida misol tariqasida 2 qator matn qo'shamiz ammo siz ekraningiz to'lguncha matn kiriting, shunki ushandagina siz ichki manzil qanday ishlashini tushunib olasiz. <br>
+                So'ngra li elementlari ichidagi matnlarni a elementlari bilan o'raymiz. a elementning href hossasini section elementining id hossasi bilan bog'laymiz. Quyidagi misolga qarang. 
+            </p>
+            <pre>
+                <code>
+                    &lt;nav&gt;
+                        &lt;ul&gt;
+                        &lt;li&gt; 
+                            &lt;a href="#menHaqimda"&gt;Men haqimda&lt;/a&gt;  
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#menHaqimda"&gt;Qilgan ishlarim&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#menHaqimda"&gt;Men bilan bog'lanish&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                    &lt;section id="menHaqimda"&gt;
+                        Ushbu qismga o'zingiz haqingizda ma'lumot kiriting. 
+                        Yoki vebsahifangiz shirkat haqida bo'lsa shirkat 
+                        haqida ma'lumot kiriting. 
+                    &lt;/section&gt;
+                    &lt;section id="qilganIshlarim"&gt;
+                        Bu bi'limda erishgan yutuqlaringiz haqida ma'lumot 
+                        kiriting, yoki boshqa istalgan malumot kiriting. 
+                        Qanday ma'lumot kiritish siz yaratayotgan vebshifa 
+                        turiga bog'liq. 
+                    &lt;/section&gt;
+                    &lt;section id="boglanish"&gt;
+                        Bu bo'limda bog'lanish usullari ya'ni aloqaga
+                        chiqish yo'llari haqida ma'lumot kiriting, 
+                        masalan telefon raqami, email manzil va hokazolar. 
+                    &lt;/section&gt;
+                </code>
+            </pre>
+            <p>
+                Agar vebsahifa so'ngida vebsahifa boshiga olib boruvchi ichki manzilli havola yaratmoqchi bo'lsangiz, unda vebsahifa so'ngida yaratilgan a elementining href hossasiga # (hashtag) belgisini o'zini yozish kifoya.
+            </p>
+            <p>
+                Agar foydalanuvchi yuklab olishi kerak bo'lgan faylga havola sozlamoqchi bo'lsangiz, unda a elementining ichida download hossasini yozish kerak. 
+            </p>
+            <p>
+                Agar foydalanuvchi havolaga bosganda telefon qilish uchun qo'shimcha oyna ochilishini istasangiz, u quyidagicha yoziladi.  
+            </p>
+            <pre>
+                <code>
+                    &lt;p&gt; Qo'shimcha ma'lumot uchun bizga
+                    &lt;a href="tel:+998123456789"&gt; qo'ng'iroq qiling  &lt;/a&gt;
+                    &lt;/p&gt;
+                </code>
+            </pre>
+            <p>
+                Agar havola yangi oynada ochilishi kerak bo'lsa unda &lt;a&gt; tegi ichida target hossasini _blank ko'rsatgichga belgilash kerak bo'ladi. 
+            </p>
+        </section>
+
+
+
+        
+
+
+
+
+
+            <a href="tortinchisi.html">
+                <button>
+                    4-chi darsga qaytish
+                </button>
+            </a>
+            <a href="jadval.html">
+                <button>
+                    Dars Jadvali
+                </button>
+            </a>
+            <a href="oltinchisi.html">
+                <button>
+                    6-chi darsga o'tish
+                </button>
+            </a>
+    </main>
+</body>
+</html>
