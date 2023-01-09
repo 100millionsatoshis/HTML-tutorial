@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kamoliddin Muminov">
+    <meta name="description" content="HTML da a tegi yordamida havolalar yaratish----------------------------------------------------------------------------------------------------------">
+    <title>HTML da tasvirlar</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <style>
+        /* {
+            border: 1px solid red;
+        } */ 
+        body {
+            background-color: #303540;
+            color: #cccccc;
+            font-size: 20px;
+        }
+        main {
+            width: 40%;
+            margin: 0 auto;
+        }
+        pre {
+            background-color: #000000;
+            font-size: 16px;
+        }
+        button {
+            font-size: 20px;
+            display: inline-block;
+            width: 30%;
+            height: 40px;
+            margin: 5px auto;
+        }
+        a {
+            color: #cccccc;
+        }
+        a:visited {
+            color: #bbbbbb;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            6-chi dars: <br> Tasvirlar
+        </h1>
+        <hr>
+        <nav>
+            <h3>
+                Mundarija:
+            </h3>
+            <ul>
+                <li>
+                    <a href="#imgTegi">&lt;img&gt; tegi va src hossasi</a> 
+                </li>
+                <li>
+                    <a href="#altTitle">alt va title hossalari</a> 
+                </li>
+                <li>
+                    <a href="#widthHeight">width va height hossalari</a> 
+                </li>
+                <li>
+                    <a href="#figure">&lt;figure&gt; va &lt;figcaption&gt; teglari</a> 
+                </li>
+            </ul>
+        </nav>
+        <hr>
+        <section id="imgTegi">
+            <h2>
+                &lt;img&gt; tegi va src hossasi
+            </h2>
+            <p>
+                Shu vaqtgacha biz faqat matn bilan ishladik. HTMLda media fayllardan ham foydalanish mumkin. Tasvirlar media fayllarning bir turi hisoblanadi.
+            </p>
+            <p>
+                Tasvirlar <strong>img</strong> elementi yordamida vebsahifaga joylashtiriladi. img elementi ingliz tilidagi image degan so'zning qisqartirilgan shaklidir. Image, imej deb o'qiladi va uning o'zbek tilida tarjimasi tasvir bo'ladi. <br>
+                img elementi faqat &lt;img&gt; tegi bilan yoziladi va yopuvchi tegga ega emas. Ba'zan yopuvchi tegga ega bo'lmagan elementlarni quyidagicha yozilganini ko'rishingiz mumkin. Masalan img elementi: &lt;img/&gt; Buni ko'rib xaytron bo'lmang, ikkalasi ham to'g'ri hisoblanadi. Lekin xozircha bunga chuqurlashib ketmaymiz. Shunchaki bunday teglarni ko'rganda xayron bo'lmang degan maqsadda ochiqlik kiritildi. <br>
+                Agar vebsahifangizda bitta emas bir nechta rasmlardan foydalanmoqchi bo'lsangiz, ularni alohida papkaga joylashingizni maslahat beramiz. Deylik papkani <em>tasvirlar</em> deb nomladingiz. Unda tasvirlarni vebsahifangizga quyidagicha joylashingiz mumkin: 
+            </p>
+<pre>
+    <code>
+    &lt;p&gt;
+        Bizning eng so'nggi maxsulotimiz
+    &lt;/p&gt;
+    &lt;img src="tasvirlar/rasm.jpg"&gt;
+    </code>
+</pre>
+            <p>
+                yuqoridagi misolda ko'rib turganigizdek, img elementini tasvirlar papkangizdagi rasm.jpg fayli bilan bog'lash uchun <strong>src</strong> hossasidan foylanildi. src ingliz tilida source so'zining qisqargan shakli bo'lib o'zbek tilida manba degan ma'noni anglatadi. source so'zi <em>sours </em> deb o'qiladi. <br>
+                Tasvir fayli mahalliy bo'lanligi uchun yuqoridagi misolda nisbiy manzildan foydalanildi. 
+            </p>
+        </section>
+        <hr>
+        <section id="altTitle">
+            <h2>
+                alt va title hossalari
+            </h2>
+            <p>
+                img elementining alt hossasiga matn biriktiriladi va ushbu matn tasvir biron-bir sababga ko'ra ko'rinmaganda, tasvir o'rnida ko'rinadi. alt hossasiga biriktiriladigan matn qo'shtirnoq ("") yoki yakkatirnoq ('') ichida yoziladi va tenglik (=) belgisi bilan biriktiriladi. Masalan: 
+            </p>
+<pre>
+    <code>
+    &lt;p&gt;
+        Bu mening mushugim
+    &lt;/p&gt;
+    &lt;img src="tasvirlar/mushuk.jpg" alt="Mushuk rasmi"&gt;
+    </code>
+</pre>
+            <p>
+                alt hossasiga biriktirilgan matnning yana bir foydali tarafi bor. Ba'zida ko'rlar ekran o'quvchisidan foydalanishadi va vebsahifalarni eshitishadi. Shunday hollarda browser avtomatik tarzda tasvir o'rnida alt hossasiga biriktirilgan matnni o'qiydi. 
+            </p>
+            <p>
+                title hossasi ham alt hossasi kabi yoziladi va unga matn biriktiriladi. Biriktirilgan matn sichqoncha ko'rsatgichini rasm ustiga olib borganda ekranga suzib chiqadi. title hossasiga biriktilgan matnni ekran o'quvchisi o'qimaydi. title hossasi tasvir haqida qo'shimcha ma'lumot beradi va uni qo'llash ixtiyoriy hisoblanadi. 
+            </p>
+        </section>
+        <hr>
+        <section id="widthHeight">
+            <h2>
+                width va height hossalari.
+            </h2>
+            <p>
+                img elementining width hossasi tasvirning enini, height hossasi esa bo'yini belgilaydi. Agar ushbu hossalar belgilanmasa, browser tasvirni asl o'lchamlarida ko'rsatadi. Agar ushbu hossalardan biri belgilansa, unda browser ikkinchisini avtomatik tarzda o'zgartiradi va bunda aspect ratio, ya'ni proporsiya saqlanib qoladi. 
+            </p>
+        </section>
+        <hr>
+        <section id="figure">
+            <h2>
+                &lt;figure&gt; va &lt;figcaption&gt; teglari
+            </h2>
+            <p>
+                &lt;figure&gt; tegi img elementiga quti vazifasini bajaradi ya'ni ochuvchi va yopuvchi teglar bilan img elementini o'raydi. &lt;figcaption&gt; tegi esa img elementi bilan birga figure elementi ichida joylashadi. figcaption elementi tasvirga sarlavha yozish uchun ishlatiladi. 
+            </p>
+        </section>
+
+
+        </p>
+            <a href="beshinchisi.html">
+                <button>
+                    5-chi darsga qaytish
+                </button>
+            </a>
+            <a href="jadval.html">
+                <button>
+                    Dars Jadvali
+                </button>
+            </a>
+            <a href="yettinchisi.html">
+                <button>
+                    7-chi darsga o'tish
+                </button>
+            </a>
+    </main>
+</body>
+</html>
