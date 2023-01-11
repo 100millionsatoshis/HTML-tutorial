@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kamoliddin Muminov">
+    <meta name="description" content="HTML da jadvallar qanday yasalishi yoritilgan. HTML da jadvalning o'lchamlarini o'zgartirish, jadvalning qatorlari va ustunlarini o'lchamlarini o'zgartirish yoritilgan. colspan va rowspan atributlari yoritilgan">
+    <title>HTML da jadvallar yaratish</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <style>
+        /* {
+            border: 1px solid red;
+        } */ 
+        body {
+            background-color: #303540;
+            color: #cccccc;
+            font-size: 20px;
+        }
+        main {
+            width: 40%;
+            margin: 0 auto;
+        }
+        pre {
+            background-color: #000000;
+            font-size: 16px;
+        }
+        button {
+            font-size: 20px;
+            display: inline-block;
+            width: 30%;
+            height: 40px;
+            margin: 5px auto;
+        }
+        a {
+            color: #cccccc;
+        }
+        a:visited {
+            color: #bbbbbb;
+        }
+        figure {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            8-chi dars: <br> HTML da jadvallar yaratish 
+        </h1>
+        <hr>
+        <nav>
+            <h3>
+                Mundarija:
+            </h3>
+            <ul>
+                <li>
+                    <a href="#jadval">Jadval yaratish</a> 
+                </li>
+                <li>
+                    <a href="#o'lchamlar">Jadval o'lchamlari</a> 
+                </li>
+                <li>
+                    <a href="#colspan">colspan va rowspan hossalari</a> 
+                </li>
+            </ul>
+        </nav>
+        <hr>
+        <section id="jadval">
+            <h2>
+                HTMLda jadval yasash
+            </h2>
+            <p>
+                HTMLda jadvallar dasturchilarga ma'lumotlarni qatorlar va ustunlarga joylashtirish imkonini beradi. Quyida 3 ta qator va uchta ustundan iborat oddiy jadval misol qilib keltirilgan. 
+            </p>
+<pre>
+    <code>
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Filiallarimiz&lt;/th&gt;
+            &lt;th&gt;Ma'sul xodim&lt;/th&gt;
+            &lt;th&gt;lavozimi&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Toshkent filiali&lt;/td&gt;
+            &lt;td&gt;Azamatov Baxodir&lt;/td&gt;
+            &lt;td&gt;bo'lim mudiri&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Farg'ona filiali&lt;/td&gt;
+            &lt;td&gt;Baxodirov Dilmurod&lt;/td&gt;
+            &lt;td&gt;filial boshqaruvchisi&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    </code>
+</pre> 
+            <p>
+                Yuqoridagi kod jadval yasaydi, ammo jadvalning chegara chiziqlari bizga ko'rinmaydi.
+                Jadvalning chegera chiziqlarini ko'rinadigan qilish uchun bizga CSS kerak. Shu sabab jadval mavzusiga kursimizning keyingi bosqichida, ya'ni CSS ni o'rganayotganda qaytamiz. <br> 
+                Yuqorida keltirilgan misolda o'zingiz ko'rib turganingiz kabi HTML da jadval yasash &lt;table&gt; tegi bilan boshlanib &lt;/table&gt; tegi bilan tugaydi. &lt;table&gt; tegidagi table so'zi ingliz tilidan olingan, teybl deb o'qiladi, va o'zbek tiliga jadval deb tarjima qilinadi. <br>
+                Jadvallar faqat matn emas, har qanday turdagi tarkibni o'z ichiga oladi. Masalan, jadval kataklari ichiga tasvirlar joylashtirish mukin yoki boshqa jadval joylash mumkin. 
+            </p>
+            <p>
+                Keyingi pog'onadagi teglar &lt;tr&gt; jadval qatorlari turadi. Yuqoridagi misolda 3 ta tr elementi bor. tr ingliz tilidan table row so'zining birinchi harflaridan yasalgan qisqartma bo'lib, o'zbek tilida jadval qatori degan ma'noni anglatadi. <br>
+                Har bir tr elementining ichida th va td elementlari joylashgan. 
+                th table header degan so'zdan olingan va jadval bosh katagini belgilaydi. td esa table data so'zidan olingan va jadval katagini belgilaydi. 
+            </p>
+        </section>
+        <hr>
+        <section id="o'lchamlar">
+            <h2>
+                Jadval o'lchamlari
+            </h2>
+            <p>
+                HTML jadlvallari, ularning har bir ustuni va qatori belgilangan o'lchamga ega bo'lishi mumkin. Agar jadval o'lchamlari belgilanmasa jadval o'lchamlari uning ichidagi tarkibiga qarab moslashadi. 
+                Use the style attribute with the width or height properties to specify the size of a table, row or column.
+                Buning uchun style hossasidan foydalaniladi. style="width:" javdalning enini belgilash ushun qo'llaniladi. 
+                style="height:" jadvalning bo'yi uchun ishlatiladi.
+                Quyidagi misolda yuqorida keltirilgan jadvalga en kiritamiz: 
+            </p>
+<pre>
+    <code>
+    &lt;table style="width:100%"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Filiallarimiz&lt;/th&gt;
+            &lt;th&gt;Ma'sul xodim&lt;/th&gt;
+            &lt;th&gt;lavozimi&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Toshkent filiali&lt;/td&gt;
+            &lt;td&gt;Azamatov Baxodir&lt;/td&gt;
+            &lt;td&gt;bo'lim mudiri&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Farg'ona filiali&lt;/td&gt;
+            &lt;td&gt;Baxodirov Dilmurod&lt;/td&gt;
+            &lt;td&gt;filial boshqaruvchisi&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    </code>
+</pre>
+            <p>
+                100% jadvalning eni ajdod element eniga nisbatan olinadi. Agar 50% bo'lsa demak ajdod elementning yarim enini egallaydi. Ajdod element bir darajadagi yuqori element hisoblanadi. Masalan, html elementi, body va head elementlari uchun ajdod element hisoblanadi. body elementi html elementining avlod elementi hisoblanadi.  
+            </p>
+            <p>
+                Jadvalning ma'lum bit ustuni enini belgilash uchun o'sha ustun th yoki td elementiga style hossasini kiriting. Masalan: 
+            </p>
+<pre>
+    <code>
+    &lt;table style="width:100%"&gt;
+        &lt;tr&gt;
+            &lt;th style="width:50%"&gt;Filiallarimiz&lt;/th&gt;
+            &lt;th&gt;Ma'sul xodim&lt;/th&gt;
+            &lt;th&gt;lavozimi&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Toshkent filiali&lt;/td&gt;
+            &lt;td&gt;Azamatov Baxodir&lt;/td&gt;
+            &lt;td&gt;bo'lim mudiri&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Farg'ona filiali&lt;/td&gt;
+            &lt;td&gt;Baxodirov Dilmurod&lt;/td&gt;
+            &lt;td&gt;filial boshqaruvchisi&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    </code>
+</pre>
+            <p>
+                Jadvalning ma'lum bir qatorining bo'yini belgilash uchun style elementini tr elementi ichida qo'llang: 
+            </p>
+<pre>
+    <code>
+    &lt;table style="width:100%"&gt;
+        &lt;tr style="height:120px"&gt;
+            &lt;th"&gt;Filiallarimiz&lt;/th&gt;
+            &lt;th&gt;Ma'sul xodim&lt;/th&gt;
+            &lt;th&gt;lavozimi&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Toshkent filiali&lt;/td&gt;
+            &lt;td&gt;Azamatov Baxodir&lt;/td&gt;
+            &lt;td&gt;bo'lim mudiri&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Farg'ona filiali&lt;/td&gt;
+            &lt;td&gt;Baxodirov Dilmurod&lt;/td&gt;
+            &lt;td&gt;filial boshqaruvchisi&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    </code>
+</pre>
+            <p>
+                Etibor bergan bo'lsangiz, qator bo'yini foizda emas pikselda belgiladik. Piksellar haqida ham kursimizning keyingi bosqichida to'liqroq urganamiz. 
+            </p>
+        </section>
+        <hr>
+        <section id="colspan">
+            <h2>
+                colspan va rowspan hossalari
+            </h2>
+            <p>
+                Ikkita yoki bir nechta yonma-yon turgan katakni bir-biriga birlashtirish uchun colspan hossasi ishlatiladi. 
+            </p>
+            <p>
+                Ikkita yoki bir nechta ustma-ust turgan kataklarni birlashtirish uchun rowspan hossasi ishlatiladi.
+            </p>
+        </section>
+        <a href="yettinchisi.html">
+            <button>
+                7-chi darsga qaytish
+            </button>
+        </a>
+        <a href="/projectone/jadval.html">
+            <button>
+                Dars Jadvali
+            </button>
+        </a>
+        <a href="toqqizinchisi.html">
+            <button>
+                9-chi darsga o'tish
+            </button>
+        </a>
+    </main>
+</body>
+</html>
