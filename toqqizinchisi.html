@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kamoliddin Muminov">
+    <meta name="description" content="HTML da form elementi yordamida shalkllar yasash, input elementi yordamida bir qatorli matn kiritish katagi yasash, input elementining type hossasiga radio ko'rsatgichini belgilab radio tugmalar yasash, input elementining type hossasiga checkbox yozib belgilash kataklari yasash va type hossasiga button ko'rsatgichini belgilab topshirish tugmasini yasash">
+    <title>HTML da shakllar va kiritishlar</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: #303540;
+            color: #cccccc;
+            font-size: 20px;
+        }
+        main {
+            width: 40%;
+            margin: 0 auto;
+        }
+        pre {
+            background-color: #000000;
+            font-size: 16px;
+        }
+        button {
+            font-size: 20px;
+            display: inline-block;
+            width: 30%;
+            height: 40px;
+            margin: 5px auto;
+        }
+        a {
+            color: #cccccc;
+        }
+        a:visited {
+            color: #bbbbbb;
+        }
+        figure {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            9-chi dars: <br> HTML da shakllar va kiritishlar 
+        </h1>
+        <hr>
+        <nav>
+            <h3>
+                Mundarija:
+            </h3>
+            <ul>
+                <li>
+                    <a href="#shakl">Shakl va matn kiritish</a> 
+                </li>
+                <li>
+                    <a href="#radioTugmalar">Radio tugmalar</a> 
+                </li>
+                <li>
+                    <a href="#belgilash">Belgilash kataklari</a> 
+                </li>
+                <li>
+                    <a href="#topshirish">Topshirish tugmasi</a> 
+                </li>
+            </ul>
+        </nav>
+        <hr>
+        <section id="shakl">
+            <h2>
+                Shakl va matn kiritish
+            </h2>
+            <p>
+                HTML shakllar vebsahifangiz foydalanuvchilaridan ma'lumot olish uchun ishlatiladi. Foydalanuvchilarning kiritganlari ko'pincha serverga qayta ishlash uchun yuboriladi. <br>
+                HTML da shakllar bir nechta turdagi elementlar yordamida yasaladi. ularning barchasi form elementi bilan o'raladi. 
+            </p>
+<pre>
+    <code>
+    &lt;form&gt;
+    ...
+       shakl elementlari.
+    ...
+    &lt;/form&gt;
+    </code>
+</pre> 
+            <p>
+                input elementi eng ko'p ishlatiladigan shakl elementlaridan biridir. input elementining type hossasiga qanday ko'rsatgich belgilashga qarab har xil maqsadda qo'llanilishi mumkin. Masalan matn maydonchasi: 
+            </p>
+<pre>
+    <code>
+    &lt;form&gt;
+        &lt;input type="text"&gt; 
+    &lt;/form&gt;
+    </code>
+</pre> 
+            <p> 
+                type="input" bir qatorli matn kiritish uchun mo'ljallangan. 
+                Agar faqat yuqoridagi kodni o'zinigina kiritib vebbrauzerda ochsak, matn yozsa bo'ladigan oddiy to'rtburchak paydo bo'ladi. Albatta matn kiritish maydonchasiga nom berilishi kerak. Buning uchun &lt;label&gt; tegi ishlatiladi. Label so'zi ingliz tilidan olingan, leybl deb o'qiladi va o'zbek tiliga tarjimasi <em> yorliq </em> bo'ladi. 
+            </p>
+<pre>
+    <code>
+    &lt;form&gt;
+        &lt;label for="ism"&gt; Ismingiz: &lt;/label&gt; &lt;br&gt;
+        &lt;input type="text" id="ism" name="ismi"&gt; &lt;br&gt;
+        &lt;label for="familya"&gt; Familyangiz: &lt;/label&gt; &lt;br&gt;
+        &lt;input type="text" id="fimilya" name="familya"&gt;
+    &lt;/form&gt;
+    </code>
+</pre> 
+            <p>
+                Yuqoridagi kod quyidagicha ko'rinishga ega bo'ladi. 
+            </p>
+            <figure>
+                <img src="shakl1.png" alt="HTMLda matn kiritish shakliga misol.">
+                <figcaption>Ushbu shalkda 2 ta input elementi, 2 ta label elementi ishlatilgan. Bular form elementi bilan o'ralgan. Qatorlar orasiga br elementi qo'yilgan.
+                </figcaption>
+            </figure>
+            <p>
+                Yuqoridagi misolda label elementi shakl elementiga nom berish uchun ishlatilgan. 
+                label elementinig for hossasi input elementining id hossasi bilan bir xil bo'lishi kerak. Shunda, ular bir-biriga bog'lanadi. 
+            </p>
+            <p>
+                Bundan tashqari input elementi ichida name hossasi kiritilgan. Bu juda muhim hossa va bu hossani yozish shart, aks holda input elementiga kiritilgan ma'lumot serverga yuborilmaydi. <br>
+                form elementining o'zi vebsahifada ko'rinmaydi va shakl elementlariga o'ram (quti) vazifasini bajaradi. 
+                <aside> Hohishga ko'ra form elementini ko'rinadigan qilish mumkin, bu haqda kursimizning keyingi bosqichida to'liqroq ma'lumot beramiz. 
+                </aside> 
+            </p>
+        </section>
+        <hr>
+        <section id="radioTugmalar">
+            <h2>
+                Radio tugmalar
+            </h2>
+            <p>
+                Radio tugmachalar &lt;input type="radio"&gt; tegi bilan yasaladi. Radio tugmachalar foydalanuvchiga bir-qancha variantdan bittasini tanlash imkonini beradi. <br>
+                Quyida radio tugmaga misol keltirilgan. 
+            </p>
+<pre>
+    <code>
+    &lt;p&gt; Quyosh qaysi tomondan chiqadi? &lt;/p&gt;
+    &lt;form&gt;
+        &lt;input type="radio" id="shimol" name="quyoshChiqishi" value="shimol"&gt;
+        &lt;label for="shimol"&gt; 
+        shimoldan 
+        &lt;/label&gt; &lt;br&gt;
+        &lt;input type="radio" id="janub" name="quyoshChiqishi" value="janub"&gt;
+        &lt;label for="janub"&gt; 
+        janubdan 
+        &lt;/label&gt; &lt;br&gt;
+        &lt;input type="radio" id="sharq" name="quyoshChiqishi" value="sharq"&gt;
+        &lt;label for="sharq"&gt; 
+        sharqdan
+        &lt;/label&gt; &lt;br&gt;
+        &lt;input type="radio" id="g'arb" name="quyoshChiqishi" value="g'arb"&gt;
+        &lt;label for="g'arb"&gt; 
+        g'arbdan  
+        &lt;/label&gt; &lt;br&gt;
+    &lt;/form&gt;
+    </code>
+</pre>
+            <p>
+                Yuqorida keltirilgan kodda, e'tibor bergan bo'lsangiz, input elementining name hossasiga bir xil ko'rsatgich berildi. Bunga sabab, keltirilgan 4 ta radio tugmadan foydalanuvchi faqat bittasinigina tanlay oladi xolos. <br>
+                type="radio" shakl elmenti aylana shaklda brauzerda ko'rinadi. 
+                <br>
+                Etibor bering, input elementining id hossasi bilan label elementining for hossasi bir xil. Shu yusinda label va input bir-biriga bog'lanadi ya'ni label elementining ma'lum bir input tugmasiga ta'luqli ekanligi belgilanadi. 
+                <br>
+                Bundan tashqari, input elementiga value hossasi kiritilgan. Value hossasiga nima kiritilsa o'sha ma'lumot serverga yuboriladi. <br>
+                Yuqoridagi kod, brauzerda quyidagicha ko'rinadi. 
+            </p>
+            <figure>
+                <img src="radiotugmalari.png" alt="HTMLda yozilgan 4 ta variantdan iborat radio tugmachari misol tariqasida brauzerda ko'rinishi.">
+                <figcaption>4 ta variantdan iborat radio tugmali shakl elementi</figcaption>
+            </figure>
+        </section>
+        <hr>
+        <section id="belgilash">
+            <h2>
+                Belgilash kataklari
+            </h2>
+            <p>
+                Belgilsh kataklari &lt;input type="checkbox"&gt; ko'rinishda yoziladi. Belgilash kataklari berilgan variantlardan nol va undan ortiq sondagi variantlari tanlash uchun ishlatiladi. Masalan: 
+            </p>
+<pre>
+<code>
+    &lt;p&gt;
+        O'zbekiston fuqarolari qaysi ulkalarga vizasiz borishi mumkin? 
+    &lt;/p&gt;
+    &lt;form&gt;
+        &lt;input type="checkbox" id="Tailand" name="ulka1" value="Tailand"&gt;
+        &lt;label for="Tailand"&gt; Tailand &lt;/label&gt; &lt;br&gt;
+        &lt;input type="checkbox" id="Argentina" name="ulka2" value="Argentina"&gt;
+        &lt;label for="Argentina"&gt; Argentina &lt;/label&gt; &lt;br&gt;
+        &lt;input type="checkbox" id="Ukraina" name="ulka3" value="Ukraina"&gt;
+        &lt;label for="Ukraina"&gt; Ukraina &lt;/label&gt; &lt;br&gt;
+        &lt;input type="checkbox" id="Turkiya" name="ulka4" value="Turkiya"&gt;
+        &lt;label for="Turkiya"&gt; Turkiya &lt;/label&gt; &lt;br&gt;
+    &lt;/form&gt;
+</code>
+</pre>
+            <p>
+                E'tibor bergan bo'lsangiz yuqorida keltirilgan kodda name hossalariga biriktirilgan ko'rsatgichlar har xil (ulka1, ulka2, ulka3, ulka4) chunki kataklardan birini emas bir nechtasini belgilash mumkin. <br>
+                Yuqoridagi kod brauzerda quyidagicha ko'rinishga ega bo'ladi. 
+            </p>
+            <figure>
+                <img src="belgilashkatagi.png" alt="belgilash katagi keltirilgan misolning brauzerda ko'rinishi">
+                <figcaption>&lt;input type="checkbox"&gt; to'rtburchak quti ko'rinishida namoyon bo'ladi</figcaption>
+            </figure>
+        </section>
+        <section id="topshirish">
+            <h2>
+                Topshirish tugmasi
+            </h2>
+            <p>
+                Forma to'ldirgandan keyin topshiriladi, ya'ni serverga yuboriladi. 
+                Shalkga kiritilgan ma'lumotlarni topshirish uchun topshirish tugmasi &lt;input type="submit"&gt; bilan yasaladi. Topshirish tugmasi ma'lumotlarni serverda joylashgan shakl hallovchiga (form-handler) yuboradi. Lekin biz bunga chuqurlashmaymiz, chunki siz xozirda tashqi (front-end) dasturchilikni urganmoqdasiz. Shakl hallovchilar bilan ichki-tomon (back-end) dastruchilar chug'ullanadi.
+                Topshirish tugmasiga misol keltiramiz: 
+            </p>
+<pre>
+    <code>
+        &lt;p&gt; Ro'yxatdan o'tish &lt;/p&gt;
+        &lt;form action="/shaklHallovchi.php"&gt;
+        &lt;label for="ism"&gt; Ismingiz: &lt;/label&gt; &lt;br&gt;
+        &lt;input type="text" id="ism" name="foydalanuvchiismi"&gt; &lt;br&gt;
+        &lt;label for="familya"&gt; Familyangiz: &lt;/label&gt; &lt;br&gt;
+        &lt;input type="text" id="familya" name="foydalanuvchifamilyasi"&gt; &lt;br&gt;
+        &lt;input type="submit" value="Yuborish"&gt;
+        &lt;/form&gt;
+    </code>
+</pre>
+            <p>
+                E'tibor bergan bo'lsangiz yuqoridagi kodda form elementi ichida action hossasi qo'llanilgan. action hossasiga shakl-hallovchi (form-handler) faylning nomi yoziladi. <br>
+                Yuqoridagi kod brauzerda quyidagicha namoyon bo'ladi.  
+            </p>
+            <figure>
+                <img src="topshirish.png" alt="HTML da topshirish tugmasini yasashga misolning brauzerda ko'rinishi">
+                <figcaption>Bosiladigan tugmaga "Yuborish" deb nom berilgan.</figcaption>
+            </figure>
+            <p>
+                Yuborish tugmasi bosilganda foydalanuvchi kiritgan ma'lumotlar form elementining action hossasida ko'rsatilgan faylga yuboriladi. 
+            </p>
+        </section>
+
+
+
+
+        <a href="sakkizinchisi.html">
+            <button>
+                8-chi darsga qaytish
+            </button>
+        </a>
+        <a href="/projectone/jadval.html">
+            <button>
+                Dars Jadvali
+            </button>
+        </a>
+        <a href="oninchisi.html">
+            <button>
+                10-chi darsga o'tish
+            </button>
+        </a>
+    </main>
+</body>
+</html>
