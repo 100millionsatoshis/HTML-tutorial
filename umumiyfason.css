@@ -1,0 +1,29 @@
+body {
+    background-color: #303540;
+    color: #cccccc;
+    font-size: 20px;
+}
+main {
+    width: 40%;
+    margin: 0 auto;
+}
+pre {
+    background-color: #000000;
+    font-size: 16px;
+}
+button {
+    font-size: 20px;
+    display: inline-block;
+    width: 30%;
+    height: 40px;
+    margin: 5px auto;
+}
+a {
+    color: #cccccc;
+}
+a:visited {
+    color: #bbbbbb;
+}
+figure {
+    margin: 10px 0;
+}
