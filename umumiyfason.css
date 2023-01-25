@@ -1,10 +1,10 @@
 body {
     background-color: #303540;
     color: #cccccc;
-    font-size: 20px;
+    font-size: 1.3em;
 }
 main {
-    width: 40%;
+    width: 768px;
     margin: 0 auto;
 }
 pre {
