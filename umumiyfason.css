@@ -1,20 +1,28 @@
 body {
-    background-color: #303540;
+    background-color: #264040;
     color: #cccccc;
     font-size: 1.3em;
+    line-height: 1.6;
 }
 main {
     width: 768px;
     margin: 0 auto;
+    text-align: justify;
 }
 pre {
     background-color: #000000;
-    font-size: 16px;
+    font-size: 1em;
+}
+#jadvalMenyusi button {
+    width: 90%;
+    font-size: 1.2em;
 }
 button {
-    font-size: 20px;
+    color: #cccccc;
+    background-color: #2F4F4F;
+    font-size: 1.1em;
     display: inline-block;
-    width: 30%;
+    width: 32%;
     height: 40px;
     margin: 5px auto;
 }
