@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto 768px auto;
+    grid-template-rows: 100vh;
+    gap: 1rem;
+    justify-content: center;
+    background-color: #264040;
+    color: #cccccc;
+    font-family: Arial, Tahoma, sans-serif;
+    font-size: 1.3em;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+.mainMenu {
+    height: 92vh;
+    width: 384px;
+    margin: 2rem 0 0 0;
+    padding: none;
+    overflow: auto;
+}
+
+/* this is to remove triangle from drop down menu */
+.mainMenu details {
+    width: 94%;
+    border: 2px solid #193030;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.mainMenu details:hover {
+    background-color: #193030;
+}
+.mainMenu summary {
+    list-style: none;
+    padding: none;
+    width: 94%;
+}
+
+.mainMenu li {
+    margin-top: 0.6rem;
+    background-color: #2f4f4f;
+    padding: none;
+    border-radius: 0.5rem;
+    width: 92%;
+}
+
+.mainMenu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #cccccc;
+    width: 90%;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+}
+
+.mainMenu a:hover {
+    background-color: #193030;
+    width: 100%;
+}
+
+.main {
+    width: 768px;
+    margin: 0;
+    overflow: auto;
+    padding: 0.5rem;
+}
+
+a:link {
+    text-decoration: none;
+    color:bisque;
+}
+
+a:visited {
+    color: burlywood;
+}
+
+.footer {
+    border: 1px solid #193030;
+    width: 384px;
+    height: 92vh;
+    padding: 1rem;
+    margin: 2rem 0 0 0;
+}
+/* code example */
+pre {
+    background-color: #333333;
+    font-size: 1em;
+    position: relative;
+}
+pre code {
+    background: transparent;
+}
+
+code {
+    background-color: #333333;
+    padding: 0.5rem;
+}
+
+.tilNomi {
+    background-color: orange;
+    border-radius: 1em;
+    color: #264040;
+    padding: 0.3em 0.5em;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    float: right;
+}
+figure {
+    margin: 1rem 0;
+}
+figure img {
+    width: 100%;
+}
+
+/* reusable zebra table */ 
+
+.jadval tr:nth-child(even) {
+    background-color: #2f4f4f;
+}
+.jadval {
+    width: 100%;
+    border: 1px solid #193030;
+}
+.jadval th {
+    background-color: #cccccc;
+    color: #264040;
+    padding: 1rem;
+}
+.jadval td {
+    padding: 1rem;
+}
+button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* CSS lesson 3 */ 
