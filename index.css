@@ -1,20 +1,46 @@
-html {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
 }
 
 body {
+    background: url(/MarraUniversity/media/pexels-anna-tarazevich-5481255.jpg);
+    background-size: 100%;
     background-color: #264040;
     color: #cccccc;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3em;
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
+ 
 }
+
 header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*
     background-color: #8FBC8F;
+    opacity: 0.2; */
     color: #2F4F4F;
     margin: 0;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+#logoAndBrendName {
+    display: inline-block;
+    width: 768px;
+    padding-top: 0;
+}
+
+#links {
+    display: inline-block;
+    width: 50%;
+  
 }
 #headerLogo {
     margin-top: 10px;
@@ -27,13 +53,41 @@ header {
     font-size: 50px;
     line-height: 1.4;
 }
-a {
+
+button {
+    background-color: #264040;
+    color: #cccccc;
+    font-size: 1rem;
+    padding: 15px 15px;
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: #2F4F4F;
+    border-radius: 10px;
+    color: #cccccc;
+}
+
+a:link, a:visited {
     color: #2F4F4F;
-    margin-left: 20px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+a:hover {
+    color: #cccccc;
+    background-color: #2F4F4F;
+}
+a:active {
+    color: #cccccc;
+    background-color: #264040;
 }
 
 main {
+    display: none;
     width: 768px;
-    margin: 0 auto;
+    margin: 12rem auto;
     text-align: justify;
 }
