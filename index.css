@@ -5,13 +5,15 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: url(/MarraUniversity/media/pexels-anna-tarazevich-5481255.jpg);
     background-size: 100%;
     background-color: #264040;
-    color: #cccccc;
+    color: #2F4F4F;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3em;
- 
 }
 
 header {
@@ -21,69 +23,45 @@ header {
     /*
     background-color: #8FBC8F;
     opacity: 0.2; */
-    color: #2F4F4F;
     margin: 0;
-    padding: 20px 40px;
+    padding: 20px 27px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 99;
 }
 
-
 #logoAndBrendName {
-    display: inline-block;
-    width: 768px;
-    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    padding: 1rem;
+    background-color: #e9e7ea;
+}
+
+#brendNomi {
+    font-family: 'Limelight', 'cursive';
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
 }
 
 #links {
-    display: inline-block;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: 50%;
-  
-}
-#headerLogo {
-    margin-top: 10px;
-    margin-left: 10px;
-    display: inline-block;
-}
-#brendNomi {
-    font-family: 'Limelight', cursive;
-    display: inline-block;
-    font-size: 50px;
-    line-height: 1.4;
+    position: relative;
+    font-weight: bolder;
+    background-color: #e9e7ea;
 }
 
-button {
-    background-color: #264040;
-    color: #cccccc;
-    font-size: 1rem;
-    padding: 15px 15px;
-    border-radius: 10px;
-    font-size: 1.3em;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-button:hover {
-    background-color: #2F4F4F;
-    border-radius: 10px;
-    color: #cccccc;
-}
-
-a:link, a:visited {
+.fa-brands {
     color: #2F4F4F;
-    padding: 20px 20px;
-    border-radius: 10px;
-    text-decoration: none;
 }
-a:hover {
-    color: #cccccc;
-    background-color: #2F4F4F;
-}
-a:active {
-    color: #cccccc;
-    background-color: #264040;
-}
+
 
 main {
     display: none;
