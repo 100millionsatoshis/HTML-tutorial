@@ -8,12 +8,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/MarraUniversity/media/pexels-anna-tarazevich-5481255.jpg);
+    background: url(/MarraUniversity/media/pexels-anna-tarazevich-5481255.jpg); 
     background-size: 100%;
     background-color: #264040;
     color: #2F4F4F;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3em;
+    min-height: 100vh;
 }
 
 header {
@@ -38,7 +39,8 @@ header {
     align-items: center;
     width: 30%;
     padding: 1rem;
-    background-color: #e9e7ea;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
 }
 
 #brendNomi {
@@ -54,14 +56,49 @@ header {
     align-items: center;
     width: 50%;
     position: relative;
-    font-weight: bolder;
-    background-color: #e9e7ea;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
 }
 
-.fa-brands {
+.loginPopUp {
+    border: 2px solid #2F4F4F;
+}
+
+
+#links a {
+    width: 17%;
+    text-decoration: none;
     color: #2F4F4F;
+    padding: 1rem;
 }
 
+#links a:hover {
+    background-color: #2F4F4F;
+    color: #cccccc;
+}
+
+.fa-brands, .fa-solid {
+    display: block;
+    font-size: 2rem;
+}
+
+.wrapper {
+    color: #fff;
+    position: relative;
+    width: 512px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box h2 {
+    text-align: center;
+}
 
 main {
     display: none;
